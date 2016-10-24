@@ -1,0 +1,8 @@
+// Generated at <%= Time.now.strftime("%Y/%m/%d/%H:%M:%S") %>
+
+class <%= swift_class_name(attributes[:class_name]) %> {
+  <% attributes[:variables].each do |key, value| %>
+  let <%= swift_class_variable_name(key) %> : String = <%= swift_string(value) %>
+  <% end %>
+}
+
